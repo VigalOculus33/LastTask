@@ -31,15 +31,24 @@ public class Alphabet {
         return concatenatedString.getBytes();
     }
 
+    public static int indexOf(char c) {
+        return c;
+    }
+
+    public static char charAt(int keyVal) {
+        return (char) keyVal;
+    }
+    /**
     AesEncryptor aesEncryptor = new AesEncryptor();
-    byte[] encryptedAlphabet = aesEncryptor.encrypt(arrayListToBytes(alphabet));
+    //byte[] encryptedAlphabet = aesEncryptor.encrypt(arrayListToBytes(alphabet));
 
 
-    public byte[] getResult() {
+    //public byte[] getResult() {
         return result;
     }
 
     public void setResult(byte[] result) {
         this.result = result;
+     */
+
     }
-}
