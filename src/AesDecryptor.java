@@ -21,7 +21,7 @@ public class AesDecryptor extends Cipher {
      * @throws IllegalArgumentException if the supplied arguments
      *                                  are deemed invalid for constructing the {@code Cipher} object
      */
-    protected AesDecryptor(CipherSpi cipherSpi, Provider provider, String transformation) throws NoSuchPaddingException, NoSuchAlgorithmException {
+    public AesDecryptor(CipherSpi cipherSpi, Provider provider, String transformation) throws NoSuchPaddingException, NoSuchAlgorithmException {
         super(cipherSpi, provider, transformation);
         this.key = key;
         this.ivParameterSpec = ivParameterSpec;
