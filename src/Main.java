@@ -1,4 +1,4 @@
-
+import java.nio.file.Files;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
@@ -20,6 +20,8 @@ public class Main {
 
         HardBruteForse bruteForse = new HardBruteForse();
 
+        AesEncryptor aesEncryptor = new AesEncryptor();
+
         while (true) {
 
             System.out.println("Меню");
@@ -28,6 +30,8 @@ public class Main {
             System.out.println("2 расшифровать файл");
             System.out.println("3 взломать файл");
             System.out.println("4 сохранить файл");
+            System.out.println("5 Aes шифрование");
+
             int comanda = scanner.nextInt();
             scanner.nextLine();
 
@@ -55,6 +59,14 @@ public class Main {
             if (comanda == 4) {
                 System.out.println("введите адрес для сохранения файла");
                 getter.FileWriter();
+            }
+            if (comanda ==5){
+                System.out.println("Введите адрес файла для AES шифрования:");
+                String aesFileToEncrypt = scanner.nextLine();
+                byte[] fileContent = getter.readFileBytes(aesFileToEncrypt);
+                byte[] encryptedData = aesEncryptor.encrypt(fileContent);
+                getter.writeFileBytes("path/to/encrypted_file.txt", encryptedData);
+                System.out.println("Файл зашифрован AES, сохраните файл");
             }
         }
     }

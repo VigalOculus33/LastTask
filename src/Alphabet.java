@@ -15,7 +15,6 @@ public class Alphabet {
             "Ф", "ф", "Х", "х", "Ц", "ц", "Ч", "ч", "Ш", "ш", "Щ", "щ", "Э", "э", "Ю", "ю", "Я", "я", ",", ".", "!", "?", "(", ")", " "));
 
 
-
     public Alphabet() throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException {
     }
 
@@ -38,6 +37,7 @@ public class Alphabet {
         String concatenatedString = builder.toString();
         return concatenatedString.getBytes();
     }
+
     public char[] arrayListToChars() {
         StringBuilder builder = new StringBuilder();
         for (String str : alphabet) {
@@ -59,19 +59,4 @@ public class Alphabet {
 
     public static class arrayListToChars {
     }
-
-
-    //AesEncryptor aesEncryptor = new AesEncryptor();
-    //byte[] encryptedAlphabet = aesEncryptor.encrypt(arrayListToBytes(alphabet));
-
-    /**
-    public byte[] getResult() {
-        return result;
-    }
-
-    public void setResult(byte[] result) {
-        this.result = result;
-
-        }
-     */
-    }
+}

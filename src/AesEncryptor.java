@@ -26,7 +26,6 @@ public class AesEncryptor {
         this.cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
     }
     //----------------------------------------------------------------------------------------------------------------------//
-
     public byte[] encrypt(byte[] data) throws InvalidKeyException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
         // Метод для шифрования данных
         cipher.init(Cipher.ENCRYPT_MODE, key, ivParameterSpec);
